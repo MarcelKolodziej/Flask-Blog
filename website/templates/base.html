@@ -9,17 +9,29 @@
      rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"/
     crossorigin="anonymous">
 
+
     <title>{% block title %}  {% endblock %}</title>
 </head>
 <body>
-    <nav class="navbar navbar-dark bg-dark">
-        <!-- Navbar content -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid"> 
+            <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toogle="collapse"
+            data-bs-target="#navbar">
+            <span class="navbar-toggler-icon"></span>
+            ></button>
+            <div class="collapse navbar-collapse" id="navbar">
+                <div class="navbar-nav">
+                    <a class="nav-item nav-link" href="/home">Home</a>
+                    <a class="nav-item nav-link" href="/login">Login</a>
+                    <a class="nav-item nav-link" href="/sign-up">Sign Up</a>
+                </div>
+            </div>
+        </div>
     </nav>
-
-
-    <h1> Hi </h1>
-    <div>{% block content %}  {% endblock %}</div>
-    
+  
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous">
     </script>
 
